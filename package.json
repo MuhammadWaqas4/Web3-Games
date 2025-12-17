@@ -1,0 +1,50 @@
+{
+    "name": "web3-games",
+    "version": "0.0.1",
+    "description": "On chain games with oracle based randomness",
+    "scripts": {
+        "build": "forge build",
+        "build-force": "forge build --force",
+        "check-size": "hardhat size-contracts",
+        "check-storage": "hardhat check",
+        "compile": "hardhat compile",
+        "compile-force": "hardhat compile --force",
+        "deploy": "hardhat run scripts/deploy.js",
+        "deploy-fork": "cross-env HARDHAT_FORK=true hardhat run scripts/deploy.js --network hardhat",
+        "deploy-local": "hardhat run scripts/deploy.js --network hardhat",
+        "deploy-staging": "hardhat run scripts/deploy.js --network staging",
+        "format": "prettier --check --write .prettierrc *.json *.js {contracts,tests}/**/*.sol scripts/**/*.js graphs/**/*.{json,ts}",
+        "format-lint": "npm run format && npm run lint",
+        "lint": "solhint --max-warnings 0 {contracts,tests}/**/*.sol",
+        "test": "forge test",
+        "test-force": "forge build --force && npm run test",
+        "test-fork": "cross-env FOUNDRY_PROFILE=testing npm run test",
+        "test-log": "npm run test -- -vv",
+        "test-quick": "npm run test -- --no-compile",
+        "test-report": "npm run test -- --gas-report",
+        "test-verbose": "npm run test -- -vvvvv"
+    },
+    "author": "Games Team",
+    "license": "MIT",
+    "devDependencies": {
+        "@nomicfoundation/hardhat-foundry": "^1.2.0",
+        "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+        "@openzeppelin/hardhat-upgrades": "^3.9.0",
+        "cross-env": "^7.0.3",
+        "dotenv": "^16.4.5",
+        "hardhat": "^2.24.1",
+        "hardhat-contract-sizer": "^2.10.0",
+        "hardhat-storage-layout": "^0.1.7",
+        "prettier": "^3.3.3",
+        "prettier-plugin-package": "^1.4.0",
+        "prettier-plugin-solidity": "^1.4.1",
+        "prettier-plugin-sort-imports": "^1.8.6",
+        "solhint": "^6.0.1"
+    },
+    "dependencies": {
+        "@chainlink/contracts": "1.4.0",
+        "@openzeppelin/contracts": "5.4.0",
+        "@openzeppelin/contracts-upgradeable": "5.4.0",
+        "envfile": "^7.1.0"
+    }
+}
