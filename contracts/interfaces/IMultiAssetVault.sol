@@ -6,7 +6,7 @@ import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 /**
  * @title IMultiAssetVault.
- * @author Rain Team.
+ * @author Game Team.
  * @dev Interface for the multi asset vault abstract contract.
  */
 interface IMultiAssetVault {
