@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 
 /**
  * @title IClaiming.
- * @author Rain Team.
+ * @author Game Team.
  * @notice Interface for the Claiming contract.
  */
 interface IClaiming {
