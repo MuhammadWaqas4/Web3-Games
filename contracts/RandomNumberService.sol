@@ -18,7 +18,7 @@ import { Chainlink } from "@chainlink/contracts/src/v0.8/operatorforwarder/Chain
 import { VRFV2PlusClient } from "@chainlink/contracts/src/v0.8/vrf/dev/libraries/VRFV2PlusClient.sol";
 
 contract RandomNumberService is
-    VRFConsumerBaseV2PlusUpgradeable,    
+    VRFConsumerBaseV2PlusUpgradeable,
     PausableUpgradeable,
     Ownable2StepUpgradeable,
     UUPSUpgradeable,
