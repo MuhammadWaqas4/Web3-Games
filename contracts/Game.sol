@@ -17,7 +17,8 @@ import { ReentrancyGuardUpgradeable } from "@openzeppelin/contracts-upgradeable/
 import { GameCasinoErrors } from "./interfaces/Errors.sol";
 import { IRandomNumberService } from "./interfaces/IRandomNumberService.sol";
 import { IReservoir } from "./interfaces/IReservoir.sol";
-// import { ITreasury } from "./interfaces/ITreasury.sol"; // TODO write treasury interface
+
+import { ITreasury } from "./interfaces/ITreasury.sol";
 
 /**
  * @title GameCasino.
