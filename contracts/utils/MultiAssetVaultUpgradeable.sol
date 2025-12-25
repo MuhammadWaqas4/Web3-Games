@@ -36,7 +36,7 @@ abstract contract MultiAssetVaultUpgradeable is IMultiAssetVault, Initializable,
         mapping(IERC20 asset => mapping(address owner => uint256 balance)) _balances;
     }
 
-    // keccak256(abi.encode(uint256(keccak256("raincasino.storage.MultiAssetVault")) - 1)) & ~bytes32(uint256(0xff))
+    // keccak256(abi.encode(uint256(keccak256("gamecasino.storage.MultiAssetVault")) - 1)) & ~bytes32(uint256(0xff))
     bytes32 private constant MultiAssetVaultStorageLocation =
         0x39c309a110dd22495d81d1b2ab0e1847f4145957f48825546ead22a758749000;
 
