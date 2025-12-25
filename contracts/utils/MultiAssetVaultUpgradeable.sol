@@ -17,7 +17,7 @@ import { _revert } from "../shared/Globals.sol";
 
 /**
  * @title MultiAssetVaultUpgradeable.
- * @author Rain Team.
+ * @author Game Team.
  * @dev Multi asset vault based on ERC-4626 "Tokenized Vault Standard". This implementation is neither ERC-20
  * nor ERC-4626 compliant and builds upon the latter to achieve the specific goal of having multiple assets in one vault
  * without the tokenization of shares.
@@ -28,7 +28,7 @@ abstract contract MultiAssetVaultUpgradeable is IMultiAssetVault, Initializable,
 
     /* ========================== ERC7201 STORAGE ========================== */
 
-    /// @custom:storage-location erc7201:raincasino.storage.MultiAssetVault
+    /// @custom:storage-location erc7201:gamecasino.storage.MultiAssetVault
     struct MultiAssetVaultStorage {
         mapping(IERC20 asset => bool isAsset) _isAsset;
         mapping(IERC20 asset => uint8 underlyingDecimals) _underlyingDecimals;
@@ -36,7 +36,7 @@ abstract contract MultiAssetVaultUpgradeable is IMultiAssetVault, Initializable,
         mapping(IERC20 asset => mapping(address owner => uint256 balance)) _balances;
     }
 
-    // keccak256(abi.encode(uint256(keccak256("raincasino.storage.MultiAssetVault")) - 1)) & ~bytes32(uint256(0xff))
+    // keccak256(abi.encode(uint256(keccak256("gamecasino.storage.MultiAssetVault")) - 1)) & ~bytes32(uint256(0xff))
     bytes32 private constant MultiAssetVaultStorageLocation =
         0x39c309a110dd22495d81d1b2ab0e1847f4145957f48825546ead22a758749000;
 
