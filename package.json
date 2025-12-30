@@ -45,6 +45,8 @@
         "@chainlink/contracts": "1.4.0",
         "@openzeppelin/contracts": "5.4.0",
         "@openzeppelin/contracts-upgradeable": "5.4.0",
+        "@uniswap/universal-router": "^2.1.0",
+        "@uniswap/permit2": "github:Uniswap/permit2",
         "envfile": "^7.1.0"
     }
 }
