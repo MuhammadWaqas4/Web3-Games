@@ -23,7 +23,7 @@ async function main() {
 
     // Deployment variables.
     const assetAddress = process.env.ASSET_ADDRESS;
-    const reservoirAddress = "0x5Ed6F7d539A2d76239ebe08dE653524D6B999B55";
+    const reservoirAddress = "";
  
     const claimingAddress = await deploy("Claiming", [assetAddress, reservoirAddress]);
  
