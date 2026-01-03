@@ -21,6 +21,30 @@ async function main() {
     const linkAddress = ""; // link token address
     const nodeAddress = ""; // node wallet address
 
+     // Deployment variables.
+     const assetAddress = process.env.ASSET_ADDRESS;
+     const reservoirAddress = "0x5Ed6F7d539A2d76239ebe08dE653524D6B999B55";
+ 
+     const claimingAddress = await deploy("Claiming", [assetAddress, reservoirAddress]);
+ 
+     // Waiting for block explorer.
+     await new Promise((resolve) => setTimeout(resolve, 45000));
+ 
+     // Verifying contract.
+     await verify(claimingAddress, [assetAddress, reservoirAddress]);
+ 
+     // Setup.
+     const reservoirInstance = await hre.ethers.getContractAt("Reservoir", reservoirAddress);
+ 
+     const updateClaimingTransaction = await reservoirInstance.updateClaiming(claimingAddress);
+     await updateClaimingTransaction.wait();
+ 
+     console.log("Claiming setup complete");
+ 
+     // Exiting.
+     process.exit();
+     
+
     // Exiting.
     process.exit();
 }
