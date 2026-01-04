@@ -20,6 +20,8 @@ async function main() {
     const ownerAddress = ""; // admin wallet
     const linkAddress = ""; // link token address
     const nodeAddress = ""; // node wallet address
+    const path = process.env.PATH;
+    const url = process.env.API_URL;
 
     // Exiting.
     process.exit();
