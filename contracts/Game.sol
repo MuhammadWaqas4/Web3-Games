@@ -704,14 +704,6 @@ contract GameCasino is
     }
 
     /**
-     * @notice Meant to rescue jackpot in the case of a fault.
-     * @dev Can only be called when all bets are paused so as to avoid user's funds from being stuck.
-     */
-    function rescue() external whenPaused onlyOwner {
-        usdt.safeTransfer(msg.sender, jackpot);
-    }
-
-    /**
      * @notice Pauses bets.
      */
     function pause() external onlyOwner {
