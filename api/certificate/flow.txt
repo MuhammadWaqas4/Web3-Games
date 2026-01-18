@@ -1,0 +1,25 @@
+
+Student request certificate and pay fee 
+requestCertificate{ value: 0.01 ether }(
+    "Ali Khan",
+    "BS Computer Science"
+);
+
+
+Uni set marks
+setMarks(1, 75);
+
+
+Uni issue Certificate
+mintCertificate(
+    1,
+    "ipfs://QmXYZ.../metadata.json"
+);
+
+Hec Verifies it
+verifyCertificate(1);
+
+To check certificate
+ownerOf(1);        // confirms ownership
+tokenURI(1);       // fetch metadata
+isVerified(1);     // true / false
